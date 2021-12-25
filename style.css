@@ -1,0 +1,451 @@
+/* font */
+@font-face {
+	font-family: "Roboto";
+	src: url(../tiruwebsite2/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+	font-family: "Komoda";
+	src: url(Komoda.otf) format('truetype');
+}
+@font-face {
+	font-family: "aleo-regular-webfont";
+	src: url(aleo-regular-webfont.ttf) format('truetype');
+}
+
+
+
+body {   
+    background-color: #ffb4a2;
+    font-family: "aleo-regular-webfont";
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* container_menu_atas */
+.container_menu_atas {
+    overflow: hidden;
+    background-color: salmon;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.container_menu_atas h2 {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container_menu_atas h2:hover {
+    background: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+/* tutup container_menu_atas */
+
+/* isi menu */
+.container_each_bar {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 14.2857143%;
+}
+
+
+.container_isi_topbar_n5 {
+    display: none;
+    animation: kebawah 0.5s ease;
+    animation-fill-mode: forwards;
+    flex-direction: column;
+}
+
+@keyframes kebawah {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 80px;
+    }
+}
+/* tutup isi menu */
+
+/* container_kanji */ 
+.container_kanji {
+    width: 800px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: salmon;
+    border-radius: 10px;
+    margin-top: 70px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+/* tutup container_kanji
+
+/* judul_container_kanji */
+.judul_container_kanji {
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+.judul_container_kanji h2 {
+    font-size: 30px;
+}
+
+/* tutup judul_container_kanji */
+
+/* kolom_kanji */
+.kolom_kanji {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* tutup kolom_kanji */
+
+:root {
+    --primary: #f2709c;
+    --secondary: #ff9472;
+    --dark: #212121;
+    --light: #F3F3F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__face--front h2 {
+    color: #FFF;
+    font-size: 32px;
+}
+
+.card__face--back {
+    background-color: var(--light);
+    transform: rotateY(180deg);
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__header {
+    position: relative;
+}
+
+.card__header:after {
+    content: '';
+    display: block;
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+}
+
+.card__header h2 {
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/* SOAL */
+.container_soal_latihan {
+    width: 800px;
+    background-color: salmon;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.container_SL_bawah button {
+    margin-top: 90px;
+    font-size: 20px;
+}
+
+.container_SL_atas {
+    height: 40px;
+    border-bottom: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container_SL_atas h3 {
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.container_SL_bawah {
+    padding-bottom: 20px;
+}
+
+.submit_container {
+    display: none;
+    width: 30px;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.container_soalke1,
+.container_soalke3,
+.container_soalke2 {
+    display: none;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.start_latihan {
+    transition: 0.3s;
+    transition: 0.3s;
+    background-color: #ff4d6d;
+    border-radius: 5px;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.start_latihan:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.container_jawaban {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.jawaban {
+    display: inline-block;
+    height: 20px;
+    width: 80px;
+    text-align: center;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.jawaban:hover {
+    cursor: pointer;
+}
+
+/* TUTUP SOAL */
+
+/* SOAL ESSAY */
+.start_latihan_essay {
+    transition: 0.3s;
+    background-color: #BB377D;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+.start_latihan_essay:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.submit {
+    transition: 0.3s;
+    background-color: #BB377D;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.submit:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.container_essay {
+    display: none;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.container_soal_essay {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TUTUP SOAL ESSAY */
+.jawaban_essay {
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.jawaban_essay:focus {
+    outline: none;
+    animation: aura 0.3s ease;
+    animation-fill-mode: forwards;
+}
+
+.container_jawaban_essay {
+    box-sizing: border-box;
+}
+
+@keyframes aura {
+    0% {}
+
+    100% {
+        box-shadow: 0px 0px 10px 3px rgba(128, 255, 219, 1)
+    }
+}
+
+/* skor */
+.skor {
+    text-align: center;
+    line-height: 20px;
+    display: none;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.skor h3 {
+    display: inline-block;
+}
+
+/* tutup skor */
+
+/* restart */
+.restart_container {
+    display: none;
+    margin-top: 4px;
+}
+
+.restart {
+    transition: 0.3s;
+    background-color: #ff4d6d;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.restart:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.restart_container_PG {
+    display: none;
+    margin-top: 4px;
+}
+.restart_PG {
+    transition: 0.3s;
+    background-color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.restart_PG:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* tutup restart */
+
+/* select berapa soal */
+
+.container_select_number_of_quiz {
+    display: none;
+}
+
+.container_select_number {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* tutup select berapa soal */
+
+.jawaban1 {
+    background-color: white;
+}
+
